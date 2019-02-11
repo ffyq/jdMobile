@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <title>Title</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<script>
+    // addEventListener document.body.scrollTop 移动端兼容谷歌就行
+    window.onload = function () {
+        var div=document.querySelector("div");
+        div.addEventListener('touchstart',function (e) {
+            console.log('start');
+            console.log(e);
+        });
+        div.addEventListener('touchmove',function(e){
+           console.log('move');
+            console.log(e);
+        });
+        div.addEventListener('touchend',function (e) {
+           console.log('end');
+            console.log(e);
+        })
+    }
+</script>
+</body>
+</html>
